@@ -3,7 +3,7 @@
 <li id="u_0_45">
   <a class="navSubmenu" onclick="$(&quot;u_0_46&quot;).submit()" href="#" role="button">
     <div class="clearfix">
-      <input class="mrs _s0 _8o lfloat _ohe _ry" type="checkbox">
+      <input id="enableBox" class="mrs _s0 _8o lfloat _ohe _ry" type="checkbox" onchange="check('enableBox')">
       <div class="clearfix _42ef">
       <div class="navSubmenuName ellipsis">Enable</div>
       </div>
@@ -14,7 +14,7 @@
 <li id="u_0_45">
   <a class="navSubmenu" onclick="$(&quot;u_0_46&quot;).submit()" href="#" role="button">
     <div class="clearfix">
-      <input class="mrs _s0 _8o lfloat _ohe _ry" type="checkbox">
+      <input id="negativeFBox" class="mrs _s0 _8o lfloat _ohe _ry" type="checkbox" onchange="check('negativeFBox')">
       <div class="clearfix _42ef">
       <div class="navSubmenuName ellipsis">Negative Filter</div>
       </div>
@@ -24,7 +24,7 @@
 <li id="u_0_45">
   <a class="navSubmenu" onclick="$(&quot;u_0_46&quot;).submit()" href="#" role="button">
     <div class="clearfix">
-      <input class="mrs _s0 _8o lfloat _ohe _ry" type="checkbox">
+      <input id="customFBox" class="mrs _s0 _8o lfloat _ohe _ry" type="checkbox" onchange="check('customFBox')">
       <div class="clearfix _42ef">
       <div class="navSubmenuName ellipsis">Custom Filter</div>
       </div>
@@ -35,7 +35,7 @@
 <li id="u_0_45">
   <a class="navSubmenu" onclick="$(&quot;u_0_46&quot;).submit()" href="#" role="button">
     <div class="clearfix">
-      <input class="mrs _s0 _8o lfloat _ohe _ry" type="checkbox">
+      <input id="debugBox" class="mrs _s0 _8o lfloat _ohe _ry" type="checkbox" onchange="check('debugBox')">
       <div class="clearfix _42ef">
       <div class="navSubmenuName ellipsis">Debug</div>
       </div>
@@ -73,7 +73,7 @@ function action(box){
           //disable the filtering here
         }
         break;
-      case "customeFBox":
+      case "customFBox":
         if(box.selected == true){
           //enable the custom filter here
         }else{

@@ -2,7 +2,6 @@ import json
 import urllib2
 import random
 from flask import Flask
-from bs4 import BeautifulSoup
 
 
 def randomizeArt():
@@ -22,6 +21,7 @@ def randomizeArt():
 
 	articleOutput = spuntOutArticles['services']
 	for  article in articleOutput:
+
 		articleObject = {'title': article['title'],'info': article['info'],'page': article['page']}
 
 		articles.append(articleObject)
@@ -35,7 +35,7 @@ def randomizeArt():
 app = Flask(__name__)
 
 
-@app.route('/')
+@app.route('/return.json')
 def jsonObjects():
     return randomizeArt()
 

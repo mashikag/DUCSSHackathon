@@ -1,57 +1,53 @@
 <li class="menuDivider"></li>
 <li id="u_0_45"><div class="pagesNavMenuTitle fsm fwn fcg">Filter Settings:</div></li>
 <li id="u_0_45">
-  <a class="navSubmenu" onclick="$(&quot;u_0_46&quot;).submit()" href="#" role="button">
+  <div class="navSubmenu" role="button">
     <div class="clearfix">
-      <input id="enableBox" class="lfloat" type="checkbox" onchange="check('enableBox')">
+      <input id="enableBox" class="lfloat" type="checkbox" onchange="javascript::check('enableBox')">
       <div class="clearfix _42ef">
       <div class="navSubmenuName ellipsis">Enable</div>
       </div>
     </div>
-  </a>
+  </div>
 </li>
 <li class="menuDivider"></li>
 <li id="u_0_45">
-  <a class="navSubmenu" onclick="$(&quot;u_0_46&quot;).submit()" href="#" role="button">
+  <div class="navSubmenu" role="button">
     <div class="clearfix">
-      <input id="negativeFBox" class="lfloat" type="checkbox" onchange="check('negativeFBox')">
+      <input id="negativeFBox" class="lfloat" type="checkbox" onchange="javascript::check('negativeFBox')">
       <div class="clearfix _42ef">
       <div class="navSubmenuName ellipsis">Negative Filter</div>
       </div>
     </div>
-  </a>
+  </div>
 </li>
 <li id="u_0_45">
-  <a class="navSubmenu" onclick="$(&quot;u_0_46&quot;).submit()" href="#" role="button">
+  <div class="navSubmenu" role="button">
     <div class="clearfix">
       <input id="customFBox" class="lfloat" type="checkbox" onchange="check('customFBox')">
       <div class="clearfix _42ef">
       <div class="navSubmenuName ellipsis">Custom Filter</div>
       </div>
     </div>
-  </a>
+  </div>
 </li>
 <li class="menuDivider"></li>
 <li id="u_0_45">
-  <a class="navSubmenu" onclick="$(&quot;u_0_46&quot;).submit()" href="#" role="button">
+  <div class="navSubmenu" role="button">
     <div class="clearfix">
       <input id="debugBox" class="lfloat" type="checkbox" onchange="check('debugBox')">
       <div class="clearfix _42ef">
       <div class="navSubmenuName ellipsis">Debug</div>
       </div>
     </div>
-  </a>
+  </div>
 </li>
 
 <script>
 function check(elemId){
   var box = document.getElementById(elemId);
   
-  if(box.selected == true){
-    box.selected = false;
-  }else{
-    box.selected = true;
-  }
+  box.checked = !box.checked;
   
   action(box, elemId);
 }
@@ -60,28 +56,28 @@ function action(box){
   if(box != null){
     switch(box.id){
       case "enableBox":
-        if(box.selected == true){
+        if(box.checked == true){
           //enable the filtering here
         }else{
           //disable the filtering here
         }
         break;
       case "negativeFBox":
-        if(box.selected == true){
+        if(box.checked == true){
           //enable the filtering here
         }else{
           //disable the filtering here
         }
         break;
       case "customFBox":
-        if(box.selected == true){
+        if(box.checked == true){
           //enable the custom filter here
         }else{
           //disable the custom filter here
         }
         break;
       case "debugBox":
-        if(box.selected == true){
+        if(box.checked == true){
           //enable the debug mode here
         }else{
           //disable the debug mode here

@@ -42,3 +42,52 @@
     </div>
   </a>
 </li>
+
+<script>
+function check(elemId){
+  var box = document.getElementById(elemId);
+  
+  if(box.selected == true){
+    box.selected = false;
+  }else{
+    box.selected = true;
+  }
+  
+  action(box, elemId);
+}
+
+function action(box){
+  if(box != null){
+    switch(box.id){
+      case "enableBox":
+        if(box.selected == true){
+          //enable the filtering here
+        }else{
+          //disable the filtering here
+        }
+        break;
+      case "negativeFBox":
+        if(box.selected == true){
+          //enable the filtering here
+        }else{
+          //disable the filtering here
+        }
+        break;
+      case "customeFBox":
+        if(box.selected == true){
+          //enable the custom filter here
+        }else{
+          //disable the custom filter here
+        }
+        break;
+      case "debugBox":
+        if(box.selected == true){
+          //enable the debug mode here
+        }else{
+          //disable the debug mode here
+        }
+        break;
+    }
+  }
+}
+</script>
